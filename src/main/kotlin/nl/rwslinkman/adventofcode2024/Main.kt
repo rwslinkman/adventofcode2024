@@ -7,7 +7,8 @@ object Main {
 
     private val adventChallenges: List<AdventChallenge> = listOf(
         Day01,
-        Day02
+        Day02,
+        Day03
     )
 
     @JvmStatic
