@@ -28,7 +28,7 @@ object Day04 : AdventChallenge {
         return validCount
     }
 
-    enum class Direction(val dx: Int, val dy: Int) {
+    private enum class Direction(val dx: Int, val dy: Int) {
         UP(0, -1),
         DOWN(0, 1),
         LEFT(-1, 0),
