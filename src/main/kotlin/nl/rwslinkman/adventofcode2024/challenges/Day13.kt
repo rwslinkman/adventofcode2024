@@ -12,7 +12,7 @@ object Day13 : AdventChallenge {
         val clawMachineInstructions = parseClawMachineInstructions(inputString)
 
         return clawMachineInstructions.sumOf { clawMachine ->
-            val pressCounts = countButtonPressesCost(clawMachine)
+            val pressCounts = countButtonPresses(clawMachine)
             if(pressCounts == null) 0 else {
                 pressCounts.first * 3 + pressCounts.second
             }
@@ -60,7 +60,7 @@ object Day13 : AdventChallenge {
         }
     }
 
-    private fun countButtonPressesCost(clawMachine: ClawMachineInstruction): Pair<Long, Long>? {
+    private fun countButtonPresses(clawMachine: ClawMachineInstruction): Pair<Long, Long>? {
         // y = ax + b
         val aA = clawMachine.dyA / clawMachine.dxA.toDouble()
         // b = y - ax
@@ -88,7 +88,7 @@ object Day13 : AdventChallenge {
         val clawMachineInstructions = parseClawMachineInstructions(inputString, offset = ERROR_OFFSET)
 
         return clawMachineInstructions.sumOf { clawMachine ->
-            val pressCounts = countButtonPressesCost(clawMachine)
+            val pressCounts = countButtonPresses(clawMachine)
             if(pressCounts == null) 0 else {
                 pressCounts.first * 3 + pressCounts.second
             }
